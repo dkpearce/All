@@ -24,7 +24,7 @@ public class Hangman {
 			{
 			    wordArray.add(wordReader.nextLine());
 			}
-			wordReader.close();
+
 		}
 		catch (FileNotFoundException e) 
 		{
@@ -47,25 +47,29 @@ public class Hangman {
 		System.out.println("Hello " + name + ", Enter Difficulty Level 1)Easy 2)Medium 3)Hard: ");
 		
 		difficultyTest();
-		scanner.close();
 		
-		Scanner inputScanner = new Scanner(System.in);
-		char guess = inputScanner.next("[A-Za-z]").charAt(0);
 		System.out.println("Enter a letter to guess the word:");
-		
+		Scanner inputScanner = new Scanner(System.in);
+		char guess = inputScanner.nextLine().charAt(0);
+
 		
 		for(int i = 0; i <= cleanWord.length(); i++)
 		{
 			char letter = cleanWord.charAt(i);
-				if(letter == guess);{
+				if(letter == guess)
+				{
+					
 					System.out.println("done");
-					
-					
+						
 				}
-				
-			
+				else 
+				{
+					System.out.println("fail");
+				}
+				//this is as far as ive got to testing the word reader
 		
 		}
+		scanner.close();
 		inputScanner.close();
 	}
 	
@@ -111,11 +115,11 @@ public class Hangman {
 			System.out.println("Not a valid selection, Please pick either 1, 2 or 3.");
 		}
 	}
-		scannerDifficulty.close();
 		return n;
 	}
 	
 	public String toString() {
 		return this.word; 
 	}
+	
 }
