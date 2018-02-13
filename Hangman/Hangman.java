@@ -58,15 +58,14 @@ public class Hangman {
 			char letter = cleanWord.charAt(i);
 				if(letter == guess)
 				{
-					
+					secretWord = letter.replace;
 					System.out.println("done");
 						
 				}
 				else 
 				{
-					System.out.println("fail");
 				}
-				//this is as far as ive got to testing the word reader
+				
 		
 		}
 		scanner.close();
@@ -79,7 +78,7 @@ public class Hangman {
 		Random rand = new Random();
 
 		int  n = rand.nextInt(wordArray.size());
-		
+		 
 		return n;
 		
 	}

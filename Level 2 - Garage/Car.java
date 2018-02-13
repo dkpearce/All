@@ -1,13 +1,18 @@
 
 public class Car extends Vehicle {
 	
-	public int currentGear;
-	public String make;
-	public int engineSize;
+	public String model;
 	
-	public Car(int currentGear, String make, int engineSize) {
-		this.currentGear = currentGear;
+	public Car(String model, String colour, int price, String numberPlate) {
+		this.model = model;
 		
+	}
+	public void setmodel(String a) {
+		model = a;
+	}
+		
+	public String toStringCar() {
+		return " Model: " + model;
 	
 	}
 
