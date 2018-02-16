@@ -3,26 +3,15 @@ public class Garage {
 
 	public static void main(String[] args) {
 		
-	Car car1 = new Car();
+	Car car1 = new Car("GT86", "Orange", 15000, "XB13 DFT");
 	
-	car1.setmodel("GT86");
-	car1.setcolour("Orange");
-	car1.setprice(15000);
-	car1.setnumberPlate("XB13 DFT");
-	
-	Lorry lorry1 = new Lorry();
-	
-	lorry1.setwheelCount(6);
-	lorry1.setcolour("Black");
-	lorry1.setprice(20000);
-	lorry1.setnumberPlate("AB12 EDF");
-	
-	
+	Lorry lorry1 = new Lorry(6, "Black", 20000, "AB12 EDF");
 
+	Motorbike bike1 = new Motorbike(200, "Red", 10000, "TB16 UHF");
 	
-	
-	System.out.println(car1.toString());
-	System.out.println(car1.toStringCar());
+	System.out.println(car1.toStringcar());
+
+	System.out.println(lorry1.toStringlorry());
 	}
 
 }
